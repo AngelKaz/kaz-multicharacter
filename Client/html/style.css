@@ -1,0 +1,214 @@
+body {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: none;
+    display: none;
+}
+
+.blackbar-top {
+    width: 100%;
+    height: 3vw;
+    background-color: black;
+    border-bottom: 4px solid lightblue;
+}
+
+.blackbar-down {
+    width: 100%;
+    height: 3vw;
+    background-color: black;
+    border-top: 4px solid lightblue;
+
+    position: absolute;
+    bottom: 0vw;
+}
+
+.chars {
+    width: 90vw;
+    height: 35vw;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    transition: 0.3s;
+}
+
+.char {
+    width: 17.5vw;
+    height: 75%;
+    border: 1px solid black;
+    background-color: rgba(25, 25, 25, 0.4);
+}
+
+.char .header {
+    width: 100%;
+    height: 2.5vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid lightblue;
+    color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.char-info {
+    position: relative;
+    margin-top: 0.6vw;
+    width: 100%;
+    height: 18.5vw;
+    color: snow;
+}
+
+.char-info i {
+    font-size: 3.5vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1.25s;
+}
+
+/*
+.char-info i:hover {
+    transform: rotate(180deg);
+}*/
+
+.char-info p {
+    font-weight: 700;
+    color: snow;
+    font-size: 0.9vw;
+
+    position: relative;
+    left: 0.5vw;
+}
+
+.char-info span {
+    font-weight: normal;
+}
+
+.chars button {
+    width: 16.7vw;
+    height: 1.7vw;
+    border: 1px solid rgb(201, 180, 180);
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.buttons button {
+    width: 16.7vw;
+    height: 1.7vw;
+    border: 1px solid rgb(201, 180, 180);
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.buttons {
+    margin-top: 0.4vw;
+    width: 100%;
+}
+
+.select {
+    margin-bottom: 0.4vw;
+    transition: 0.3s;
+    background-color: rgb(70, 70, 70);
+    color: rgb(77, 198, 238);
+}
+
+.delete {
+    margin-bottom: 0.2vw;
+    transition: 0.3s;
+    background-color: rgb(70, 70, 70);
+    color: rgb(214, 58, 58);
+}
+
+.select:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: rgb(36, 165, 204);
+    color: snow;
+}
+
+.delete:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: rgb(194, 33, 33);
+    color: snow;
+}
+
+.create {
+    transition: 0.3s;
+    margin-top: 2.5vw !important;
+    background-color: rgb(70, 70, 70);
+    color: snow;
+}
+
+.create:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: rgb(36, 165, 204);
+    color: snow;
+}
+
+
+.register {
+    display: none;
+    width: 35vw;
+    height: 22vw;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    color: snow;
+    background-color: rgba(70, 70, 70, 0.9);
+}
+
+.register .header {
+    position: relative;
+    width: 100%;
+    height: 3vw;
+    background-color: rgba(70, 70, 70, 0.9);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register i {
+    position: absolute;
+    right: 1vw;
+    top: 1.5vw;
+    transform: translate(-50%, -50%);
+}
+
+.register .registration {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    width: 75%;
+}
+
+.register .registration button {
+    width: 8vw;
+}
