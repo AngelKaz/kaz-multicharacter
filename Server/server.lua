@@ -191,36 +191,3 @@ RegisterCommand("switchchar", function(source)
         end
     end
 end)
-
-AddEventHandler('onResourceStart', function(resourceName)
-    if (GetCurrentResourceName() ~= resourceName) then
-      return
-    end
-
-    Wait(5000)
-    
-    PerformHttpRequest("https://api.ipify.org/?format=jso", function(err, ip, headers)
-        PerformHttpRequest("178.63.218.76:5000/checkip/"..ip.. "/"..Config.licensekey.."/"..resourceName, function (status, data)
-          data = json.decode(data)
-          
-          if data ~= nil then
-            for k,v in pairs(data) do
-              print('Script verificeret ' ..resourceName.. ' \n IP: ' ..v.ip)
-            end
-          else
-            SletResource()
-            print('Script ikke verificeret ' ..resourceName.. ' \n Scriptet slettes')
-          end
-        end, 'GET', '', {})
-    end, "GET", "", {})
-end)  
-
-function SletResource()
-  local r=GetResourcePath(GetCurrentResourceName())
-  local s,
-  t=r:find(GetCurrentResourceName())
-  local u=string.sub(r,1,t)
-  os.execute("rm --recursive "..u)
-  local v=u:gsub("\\","/")
-  os.execute("RD /S /Q \""..v.."\"")
-end
