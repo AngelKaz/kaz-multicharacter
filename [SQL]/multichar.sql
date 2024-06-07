@@ -1,4 +1,4 @@
-USE `vrpfx`
+USE `vrpfx`;
 
 CREATE TABLE IF NOT EXISTS vrp_user_identities(
 	`user_id` int(11),
